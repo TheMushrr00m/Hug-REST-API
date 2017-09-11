@@ -1,11 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-"""Primer método: acceso local"""
+"""Segundo método: acceso http"""
 import datetime
 import hug
 
 
+@hug.get(examples="name=Jhon Doe&age=30")
 @hug.local()
 def say_hello(name: hug.types.text, age: hug.types.number, hug_timer=3):
     """Decimos hola al usuario y calculamos su año de nacimiento"""
